@@ -53,9 +53,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left 47%;
-  filter: brightness(1.08) contrast(1.1) saturate(1.06);
-  transform: scale(1.012);
+  object-position: 54% top;
+  filter: brightness(0.98) contrast(1.08) saturate(1.06);
+  transform: scale(1.01);
 }
 
 .hero__veil {
@@ -63,23 +63,13 @@ body {
   inset: 0;
   z-index: -4;
   background:
-    linear-gradient(90deg, rgba(4, 4, 5, 0.99) 0%, rgba(4, 4, 5, 0.96) 27%, rgba(4, 4, 5, 0.78) 43%, rgba(4, 4, 5, 0.28) 65%, rgba(4, 4, 5, 0.04) 100%),
-    linear-gradient(0deg, rgba(5, 4, 6, 0.9) 0%, rgba(5, 4, 6, 0.38) 20%, rgba(5, 4, 6, 0.05) 52%, rgba(5, 4, 6, 0.32) 100%),
+    linear-gradient(90deg, rgba(4, 4, 5, 0.99) 0%, rgba(4, 4, 5, 0.94) 25%, rgba(4, 4, 5, 0.68) 42%, rgba(4, 4, 5, 0.18) 65%, rgba(4, 4, 5, 0.02) 100%),
+    linear-gradient(0deg, rgba(5, 4, 6, 0.82) 0%, rgba(5, 4, 6, 0.3) 19%, rgba(5, 4, 6, 0.02) 55%, rgba(5, 4, 6, 0.22) 100%),
     radial-gradient(circle at 22% 9%, rgba(255, 211, 224, 0.08), transparent 12rem);
 }
 
 .hero__arch {
-  position: absolute;
-  z-index: -3;
-  top: 5%;
-  right: -82px;
-  width: 182px;
-  height: 52%;
-  border: 10px solid rgba(246, 176, 197, 0.5);
-  border-left: 0;
-  border-radius: 0 999px 999px 0;
-  opacity: 0.78;
-  box-shadow: 0 0 26px rgba(231, 138, 168, 0.22);
+  display: none;
 }
 
 .hero__glow {
@@ -98,7 +88,7 @@ body {
   position: relative;
   z-index: 2;
   min-height: calc(100svh - 44px);
-  padding: 30px 20px 70px;
+  padding: 30px 20px 72px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -132,45 +122,53 @@ body {
 }
 
 .brand {
-  width: 68%;
+  width: min(76%, 350px);
   margin-top: 20px;
 }
 
 h1 {
+  position: relative;
   margin: 0;
   color: #ffffff;
-  font-size: clamp(55px, 16vw, 78px);
+  font-size: clamp(60px, 16.5vw, 82px);
   font-weight: 300;
   letter-spacing: 0.025em;
-  line-height: 0.83;
+  line-height: 0.82;
   text-transform: uppercase;
   text-shadow: 0 3px 24px rgba(0, 0, 0, 0.5);
 }
 
-h1 span {
+.brand__fit {
   display: block;
   white-space: nowrap;
 }
 
-h1 em {
+.brand__glow {
   display: block;
-  margin-top: -8px;
-  margin-left: -7px;
+  width: max-content;
+  margin-top: 0;
+  margin-left: -4px;
   color: var(--pink-light);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(82px, 23vw, 116px);
-  font-style: italic;
-  font-weight: 700;
-  line-height: 0.66;
+  background: linear-gradient(180deg, #ffd0dd 0%, #f4a3bd 48%, #df7e9f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: "Great Vibes", "Times New Roman", cursive;
+  font-size: clamp(124px, 34vw, 168px);
+  font-weight: 400;
+  line-height: 0.76;
   letter-spacing: 0;
   text-transform: none;
+  transform: rotate(-6deg);
+  transform-origin: left center;
+  -webkit-text-fill-color: transparent;
   text-shadow:
-    0 0 12px rgba(231, 138, 168, 0.82),
-    0 0 34px rgba(231, 138, 168, 0.38);
+    0 0 10px rgba(255, 180, 204, 0.9),
+    0 0 32px rgba(231, 138, 168, 0.48),
+    0 9px 20px rgba(0, 0, 0, 0.24);
 }
 
 .brand p {
-  margin: 12px 0 0 31%;
+  margin: -18px 0 0 35%;
   color: #ffffff;
   font-size: 12px;
   line-height: 1;
@@ -185,7 +183,7 @@ h1 em {
 }
 
 .tagline {
-  margin: 26px 0 0;
+  margin: 22px 0 0;
   color: #ffffff;
   font-size: 19px;
   line-height: 1.28;
@@ -419,7 +417,7 @@ h1 em {
   }
 
   .hero__image {
-    object-position: left 48%;
+    object-position: 54% top;
   }
 
   .eyebrow {
@@ -428,20 +426,21 @@ h1 em {
   }
 
   .brand {
-    width: 69%;
+    width: 76%;
     margin-top: 18px;
   }
 
   h1 {
-    font-size: 54px;
+    font-size: 57px;
   }
 
-  h1 em {
-    font-size: 80px;
+  .brand__glow {
+    margin-top: 0;
+    font-size: 120px;
   }
 
   .brand p {
-    margin-left: 28%;
+    margin-left: 32%;
     font-size: 11px;
   }
 
