@@ -198,7 +198,7 @@ h1 {
   line-height: 1;
   letter-spacing: 0.19em;
   text-transform: uppercase;
-  transform: translate(34px, -54px);
+  transform: translate(8px, -30px);
   white-space: nowrap;
 }
 
@@ -484,7 +484,7 @@ h1 {
   .brand p {
     margin-left: 30%;
     font-size: 11px;
-    transform: translate(28px, -50px);
+    transform: translate(6px, -28px);
   }
 
   .tagline {
