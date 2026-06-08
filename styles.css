@@ -11,6 +11,14 @@
   --shadow: rgba(0, 0, 0, 0.55);
 }
 
+@font-face {
+  font-family: "Eva Glow Script";
+  src: url("assets/fonts/allura.ttf") format("truetype");
+  font-display: block;
+  font-style: normal;
+  font-weight: 400;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -122,7 +130,7 @@ body {
 }
 
 .brand {
-  width: min(76%, 350px);
+  width: min(73%, 340px);
   margin-top: 20px;
 }
 
@@ -144,31 +152,43 @@ h1 {
 }
 
 .brand__glow {
+  position: relative;
   display: block;
   width: max-content;
-  margin-top: 0;
-  margin-left: -4px;
+  margin-top: 20px;
+  margin-left: -2px;
   color: var(--pink-light);
-  background: linear-gradient(180deg, #ffd0dd 0%, #f4a3bd 48%, #df7e9f 100%);
+  background: linear-gradient(180deg, #ffd3df 0%, #f4a1ba 54%, #de799a 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  font-family: "Great Vibes", "Times New Roman", cursive;
-  font-size: clamp(124px, 34vw, 168px);
+  font-family: "Eva Glow Script", cursive;
+  font-size: clamp(102px, 27vw, 132px);
   font-weight: 400;
-  line-height: 0.76;
+  line-height: 0.72;
   letter-spacing: 0;
   text-transform: none;
   transform: rotate(-6deg);
   transform-origin: left center;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 6px rgba(231, 138, 168, 0.46));
+  text-shadow: none;
+}
+
+.brand__glow::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: attr(data-text);
+  color: rgba(244, 158, 185, 0.46);
+  -webkit-text-fill-color: rgba(244, 158, 185, 0.46);
+  filter: blur(8px);
+  opacity: 0.62;
   text-shadow:
-    0 0 10px rgba(255, 180, 204, 0.9),
-    0 0 32px rgba(231, 138, 168, 0.48),
-    0 9px 20px rgba(0, 0, 0, 0.24);
+    0 0 18px rgba(231, 138, 168, 0.36);
 }
 
 .brand p {
-  margin: -18px 0 0 35%;
+  margin: -8px 0 0 32%;
   color: #ffffff;
   font-size: 12px;
   line-height: 1;
@@ -426,7 +446,7 @@ h1 {
   }
 
   .brand {
-    width: 76%;
+    width: 73%;
     margin-top: 18px;
   }
 
@@ -435,12 +455,13 @@ h1 {
   }
 
   .brand__glow {
-    margin-top: 0;
-    font-size: 120px;
+    margin-top: 18px;
+    margin-left: -2px;
+    font-size: 98px;
   }
 
   .brand p {
-    margin-left: 32%;
+    margin-left: 30%;
     font-size: 11px;
   }
 
