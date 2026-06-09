@@ -56,12 +56,15 @@ body {
 
 .hero__image {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 12%;
   z-index: -5;
-  width: 100%;
+  width: 140%;
   height: 100%;
   object-fit: cover;
-  object-position: 54% top;
+  object-position: left top;
   filter: brightness(0.98) contrast(1.08) saturate(1.06);
   transform: scale(1.01);
 }
@@ -457,7 +460,7 @@ h1 {
   }
 
   .hero__image {
-    object-position: 54% top;
+    object-position: left top;
   }
 
   .eyebrow {
