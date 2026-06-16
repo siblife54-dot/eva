@@ -4209,22 +4209,27 @@ h1 {
 
 .tariff-card__badge {
   position: absolute;
-  left: 12px;
-  top: 0;
-  padding: 6px 12px;
-  border-radius: 0 0 8px 8px;
+  right: 12px;
+  top: 12px;
+  z-index: 2;
+  padding: 7px 10px;
+  border-radius: 999px;
   background: #fff4f8;
   color: #8f3859;
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 800;
   line-height: 1;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  box-shadow: 0 8px 18px rgba(110, 41, 67, 0.18);
+  box-shadow: 0 8px 18px rgba(110, 41, 67, 0.18), 0 0 14px rgba(255, 255, 255, 0.34);
 }
 
-.tariff-card--featured .tariff-card__top {
-  margin-top: 14px;
+.tariff-card__top {
+  min-height: 181px;
+}
+
+.tariff-card--wide .tariff-card__top {
+  min-height: 0;
 }
 
 .tariff-card__emoji {
@@ -4262,10 +4267,14 @@ h1 {
 
 .tariff-card__price {
   margin-top: 18px;
+  display: grid;
+  align-content: start;
+  min-height: 86px;
 }
 
 .tariff-card__price strong {
   display: block;
+  margin-top: 5px;
   color: #fff8fb;
   font-size: 35px;
   font-weight: 300;
@@ -4277,10 +4286,12 @@ h1 {
   color: #1b1217;
 }
 
-.tariff-card__price span,
 .tariff-card__price b {
-  display: block;
-  margin-top: 6px;
+  width: fit-content;
+  margin-top: 9px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
   color: rgba(255, 248, 251, 0.66);
   font-size: 10px;
   font-weight: 700;
@@ -4290,12 +4301,31 @@ h1 {
 }
 
 .tariff-card__price b {
-  font-weight: 500;
   opacity: 0.82;
 }
 
+.tariff-card__old-price {
+  width: fit-content;
+  color: rgba(255, 248, 251, 0.48);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(242, 141, 181, 0.88);
+}
+
+.tariff-card--featured .tariff-card__old-price {
+  color: rgba(28, 15, 21, 0.52);
+  text-decoration-color: rgba(143, 56, 89, 0.78);
+}
+
+.tariff-card--featured .tariff-card__price b {
+  background: rgba(255, 255, 255, 0.36);
+}
+
 .tariff-card__list {
-  margin: 18px 0 0;
+  margin: 18px 0 24px;
   padding: 0;
   display: grid;
   gap: 9px;
