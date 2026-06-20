@@ -4536,7 +4536,7 @@ h1 {
   transform: translateZ(0);
 }
 
-.program-showcase + .outcome {
+.tariffs + .outcome {
   margin-top: 0;
 }
 
