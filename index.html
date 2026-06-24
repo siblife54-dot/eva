@@ -97,7 +97,7 @@
               <span class="program-card__icon" aria-hidden="true">▦</span>
               <div>
                 <p>Старт программы</p>
-                <strong>22 июня</strong>
+                <strong id="start-date">22 июня</strong>
               </div>
             </div>
             <div class="program-card__separator" aria-hidden="true"></div>
@@ -631,6 +631,29 @@
 
     <script>
       (() => {
+        const startDate = document.querySelector("#start-date");
+
+        if (startDate) {
+          const months = [
+            "января",
+            "февраля",
+            "марта",
+            "апреля",
+            "мая",
+            "июня",
+            "июля",
+            "августа",
+            "сентября",
+            "октября",
+            "ноября",
+            "декабря",
+          ];
+          const tomorrow = new Date();
+
+          tomorrow.setDate(tomorrow.getDate() + 1);
+          startDate.textContent = `${tomorrow.getDate()} ${months[tomorrow.getMonth()]}`;
+        }
+
         const lightbox = document.querySelector(".review-lightbox");
         const lightboxImage = document.querySelector(".review-lightbox__image");
         const closeButton = document.querySelector(".review-lightbox__close");
