@@ -364,13 +364,14 @@ h1 {
 }
 
 .program-card {
-  width: 100%;
+  width: min(100%, 290px);
   min-height: 86px;
   margin-top: 22px;
+  align-self: center;
   padding: 13px;
-  display: grid;
-  grid-template-columns: 1fr 1px 1fr;
+  display: flex;
   align-items: center;
+  justify-content: center;
   border: 1px solid rgba(231, 138, 168, 0.42);
   border-radius: 16px;
   background: linear-gradient(180deg, rgba(22, 19, 22, 0.66), rgba(8, 7, 9, 0.55));
@@ -420,12 +421,6 @@ h1 {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   white-space: nowrap;
-}
-
-.program-card__separator {
-  width: 1px;
-  height: 52px;
-  background: rgba(255, 255, 255, 0.23);
 }
 
 .topic-line {

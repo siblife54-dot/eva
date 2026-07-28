@@ -6,7 +6,7 @@
     <title>Fit Girl Glow - Ева Карпова</title>
     <meta
       name="description"
-      content="Fit Girl Glow от Евы Карповой - новая фитнес-программа. Старт 22 июня, длительность 5 недель."
+      content="Fit Girl Glow от Евы Карповой — фитнес-программа длительностью 5 недель."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -93,14 +93,6 @@
           </a>
 
           <div class="program-card" aria-label="Детали программы">
-            <div class="program-card__item">
-              <span class="program-card__icon" aria-hidden="true">▦</span>
-              <div>
-                <p>Старт программы</p>
-                <strong id="start-date">22 июня</strong>
-              </div>
-            </div>
-            <div class="program-card__separator" aria-hidden="true"></div>
             <div class="program-card__item">
               <span class="program-card__icon" aria-hidden="true">◷</span>
               <div>
@@ -631,29 +623,6 @@
 
     <script>
       (() => {
-        const startDate = document.querySelector("#start-date");
-
-        if (startDate) {
-          const months = [
-            "января",
-            "февраля",
-            "марта",
-            "апреля",
-            "мая",
-            "июня",
-            "июля",
-            "августа",
-            "сентября",
-            "октября",
-            "ноября",
-            "декабря",
-          ];
-          const tomorrow = new Date();
-
-          tomorrow.setDate(tomorrow.getDate() + 1);
-          startDate.textContent = `${tomorrow.getDate()} ${months[tomorrow.getMonth()]}`;
-        }
-
         const lightbox = document.querySelector(".review-lightbox");
         const lightboxImage = document.querySelector(".review-lightbox__image");
         const closeButton = document.querySelector(".review-lightbox__close");
