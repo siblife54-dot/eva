@@ -51,7 +51,6 @@ body {
   position: relative;
   width: 100%;
   max-width: 480px;
-  min-height: 100svh;
   overflow: hidden;
   isolation: isolate;
   background: #070608;
@@ -101,8 +100,7 @@ body {
 .hero__content {
   position: relative;
   z-index: 2;
-  min-height: calc(100svh - 44px);
-  padding: 30px 20px 72px;
+  padding: 26px 20px 62px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -364,14 +362,14 @@ h1 {
 }
 
 .program-card {
-  width: min(100%, 290px);
-  min-height: 86px;
-  margin-top: 22px;
-  align-self: center;
-  padding: 13px;
+  width: max-content;
+  min-height: 66px;
+  margin-top: 18px;
+  align-self: flex-start;
+  padding: 9px 16px 9px 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border: 1px solid rgba(231, 138, 168, 0.42);
   border-radius: 16px;
   background: linear-gradient(180deg, rgba(22, 19, 22, 0.66), rgba(8, 7, 9, 0.55));
@@ -385,20 +383,20 @@ h1 {
   min-width: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: 9px;
 }
 
 .program-card__icon {
-  flex: 0 0 46px;
-  width: 46px;
-  height: 46px;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   border-radius: 50%;
   background: linear-gradient(180deg, #f5adc3, #d26789);
   color: #ffffff;
-  font-size: 24px;
+  font-size: 21px;
   box-shadow: 0 0 18px rgba(231, 138, 168, 0.36);
 }
 
@@ -413,9 +411,9 @@ h1 {
 
 .program-card strong {
   display: block;
-  margin-top: 6px;
+  margin-top: 4px;
   color: var(--pink);
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.04em;
@@ -1243,8 +1241,8 @@ h1 {
   }
 
   .program-card {
-    min-height: 84px;
-    padding: 12px 10px;
+    min-height: 62px;
+    padding: 8px 14px 8px 9px;
   }
 
   .program-card__item {
@@ -1252,10 +1250,10 @@ h1 {
   }
 
   .program-card__icon {
-    flex-basis: 42px;
-    width: 42px;
-    height: 42px;
-    font-size: 22px;
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
   }
 
   .program-card p {
